@@ -3,9 +3,9 @@
 ## Introduction
 
 We develop a new algorithm named FedGFT to mitigate the group bias in the federated learning. FedGFT directly optimizes the fairness of global model by solving a regularized objective function consisting of the empirical prediction loss and a penalty term for fairness. Specifically, FedGFT aims to solve the following problem:
-$$
-\min_{f} \frac{1}{n}\sum_{i=1}^K \sum_{j=1}^{n_k} \ell(f(X_{ij}), Y_{ij})+\lambda J(F(f)),
-$$
+
+$\min_{f} \frac{1}{n}\sum_{i=1}^K \sum_{j=1}^{n_k} \ell(f(X_{ij}), Y_{ij})+\lambda J(F(f)),$
+
 where $f$ is the global model, $F$ is a fairness metric, and $J$ is a penalty term. We found that $J(F(f))$ can also be decomposed to statistics that only depend on local clients, namely $J(F(f))=\sum_{i=1}^K F_k(f)$, thus the optimization of the above equation can be carried out similar to any classic FL algorithm such as FedAvg. More details can be found in our TMLR paper [here](https://openreview.net/pdf?id=ANXoddnzct?).
 
 ## Installation
@@ -38,7 +38,7 @@ python setup.py install
 Before running them, users have to download the datasets and correct the path of datasets in each experiment script.
   
 
-## Cite
+## Cite Our Work
 
 ```
 @article{wang2024federated,
